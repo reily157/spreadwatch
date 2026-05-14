@@ -3,10 +3,7 @@ name: HIP-4 Spread Scanner
 on:
   schedule:
     - cron: '*/5 * * * *'
-  workflow_dispatch:
-  push:
-    branches:
-      - main             # needed to commit CSV back to repo
+  workflow_dispatch:            # needed to commit CSV back to repo
 
 jobs:
   scan:
