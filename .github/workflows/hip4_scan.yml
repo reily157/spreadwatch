@@ -2,12 +2,11 @@ name: HIP-4 Spread Scanner
 
 on:
   schedule:
-   - cron: '*/5 * * * *'   # every 10 minutes (UTC)
-  workflow_dispatch:           # allow manual trigger from GitHub UI
-
-push:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
     branches:
-      - main              # needed to commit CSV back to repo
+      - main             # needed to commit CSV back to repo
 
 jobs:
   scan:
